@@ -21,12 +21,12 @@ namespace ShopingWebSiteFirstProject
         {
             string catimg = "~/img/" + FileUpload1.FileName;
             FileUpload1.SaveAs(MapPath(catimg));
-            string insCat = "insert into CategoryTB values('" + TextBox1.Text + "','" + catimg + "','" + TextBox2.Text + "','Added')";
+            string insCat = "insert into CategoryTB values('" + TextBox1.Text + "','" + catimg + "','" + TextBox2.Text + "','Available')";
 
             int i = objcls.Fn_NonQuery(insCat);
             if (i == 1)
             {
-                Response.Redirect("AdminPage.aspx");
+                Response.Redirect("AdminHomePage.aspx");
             }
 
         }

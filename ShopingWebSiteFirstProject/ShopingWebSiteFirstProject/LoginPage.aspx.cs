@@ -29,11 +29,13 @@ namespace ShopingWebSiteFirstProject
                 string regId = objcls.Fn_Scalar(strS);
                 Session["usid"] = regId;
 
+
                 string strlogtype = "select Log_Type from LoginTb where Username='" + TextBox1.Text + "' and Password='" + TextBox2.Text + "'";
                 string logtype = objcls.Fn_Scalar(strlogtype);
                 if (logtype == "")
                 {
-                    Response.Redirect("AdminPage.aspx");
+                    Session["adminId"] = regId;
+                    Response.Redirect("AdminHomePage.aspx");
                 }
                 else if (logtype == "user")
                 {
@@ -41,14 +43,10 @@ namespace ShopingWebSiteFirstProject
                 }
                 else
                 {
-                    Label5.Text = "Invalid Username Or Password";
+                    Label5.Visible = true;
+                   
                 }
             }
         }
-
-        //protected void LinkButton3_Click(object sender, EventArgs e)
-        //{
-        //    Response.Redirect("AdminReg.aspx");
-        //}
     }
 }

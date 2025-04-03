@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="ShopingWebSiteFirstProject.LoginPage" %>
+﻿    <%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="ShopingWebSiteFirstProject.LoginPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
@@ -13,7 +13,7 @@
     <table class="w-100">
         <tr>
             <td>
-                <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Login"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Login" Font-Underline="True"></asp:Label>
             </td>
             <td></td>
         </tr>
@@ -44,10 +44,15 @@
     </tr>
     <tr>
         <td>
-            <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
-        </td>
+            &nbsp;</td>
         <td>
             &nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
+        </td>
+        <td>&nbsp;</td>
     </tr>
     <tr>
         <td>
@@ -56,31 +61,25 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td>
+        <td class="auto-style1">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Enter Password"></asp:RequiredFieldValidator>
         </td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style1">
-        </td>
         <td class="auto-style1"></td>
     </tr>
     <tr>
         <td class="auto-style1">
-            <asp:LinkButton ID="LinkButton1" runat="server">Forgot password?</asp:LinkButton>
-        </td>
-        <td class="auto-style1"></td>
-    </tr>
-    <tr>
-        <td>
             &nbsp;</td>
-        <td>&nbsp;</td>
+        <td class="auto-style1"></td>
     </tr>
     <tr>
         <td>
             <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
-            <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            <asp:Label ID="Label5" runat="server" Text="Invalid Username Or Password" Visible="False"></asp:Label>
         </td>
         <td>&nbsp;</td>
     </tr>
@@ -91,10 +90,10 @@
     </tr>
     <tr>
         <td>
-            <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/UserRegistration.aspx">Don&#39;t have an account? </asp:LinkButton>
-            <asp:LinkButton ID="LinkButton3" runat="server" Font-Bold="True" Font-Size="Large">Admin </asp:LinkButton>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/UserRegistration.aspx">Don&#39;t have an account? </asp:HyperLink>
+            <asp:HyperLink ID="HyperLink2" runat="server" Font-Bold="True" Font-Size="Large" NavigateUrl="~/AdminReg.aspx">Admin   </asp:HyperLink>
             <asp:Label ID="Label4" runat="server" Text="Or   "></asp:Label>
-            <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl="~/UserRegistration.aspx" Font-Bold="True" Font-Size="Large">User</asp:LinkButton>
+            <asp:HyperLink ID="HyperLink3" runat="server" Font-Bold="True" Font-Size="Large" NavigateUrl="~/UserRegistration.aspx">User</asp:HyperLink>
         </td>
         <td>&nbsp;</td>
     </tr>

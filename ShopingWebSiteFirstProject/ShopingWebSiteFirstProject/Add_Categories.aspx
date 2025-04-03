@@ -28,7 +28,9 @@
         <td>
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         </td>
-        <td>&nbsp;</td>
+        <td>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Enter Category Name"></asp:RequiredFieldValidator>
+        </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
@@ -50,7 +52,9 @@
         <td>
             <asp:FileUpload ID="FileUpload1" runat="server" />
         </td>
-        <td>&nbsp;</td>
+        <td>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="FileUpload1" ErrorMessage="Enter Category Photo"></asp:RequiredFieldValidator>
+        </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
@@ -72,7 +76,9 @@
         <td>
             <asp:TextBox ID="TextBox2" runat="server" TextMode="MultiLine"></asp:TextBox>
         </td>
-        <td>&nbsp;</td>
+        <td>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox2" ErrorMessage="Enter Category Description"></asp:RequiredFieldValidator>
+        </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>

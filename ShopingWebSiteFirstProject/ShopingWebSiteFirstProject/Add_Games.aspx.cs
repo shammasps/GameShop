@@ -32,11 +32,11 @@ namespace ShopingWebSiteFirstProject
         {
             string strlogo = "~/img/" + FileUpload1.FileName;
             FileUpload1.SaveAs(MapPath(strlogo));
-            string sel = "insert into ProductTB values('" + DropDownList1.SelectedItem.Value + "','" + TextBox1.Text + "','" + strlogo + "'," + TextBox2.Text + ",'" + TextBox3.Text + "','" + TextBox4.Text + "','Available')";
+            string sel = "insert into ProductTB values('" + DropDownList1.SelectedItem.Value + "','" + TextBox1.Text + "','" + strlogo + "'," + TextBox2.Text + ",'" + TextBox3.Text + "'," + TextBox4.Text + ",'Available')";
             int i = objcls.Fn_NonQuery(sel);
             if (i == 1)
             {
-                Response.Redirect("AdminPage.aspx");
+                Response.Redirect("AdminHomePage.aspx");
             }
         }
     }
